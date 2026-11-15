@@ -53,6 +53,8 @@ export const postNewProduct = async (req, res) => {
             stock
          })
 
+         console.log('producto creado por: ', req.usuario)
+
     } catch (error) {
         console.error(error)
         res.status(500).json({ error: 'no se pudo crear el producto' })
